@@ -37,7 +37,7 @@ class Blockchain {
 
 			const actuallastHash = chain[i-1].hash; //gets the hash value of previous block
 			const lastDifficulty = chain[i-1].difficulty;
-			if(lastHash !== actuallastHash) return false; //checks the hash value of previous block and compares with what hash value is written in the current block
+			if(lastHash  !== actuallastHash) return false; //checks the hash value of previous block and compares with what hash value is written in the current block
 
 			const validatedHash = cryptoHash(timestamp, lastHash, data, nonce, difficulty); //calculates the hash of current block 
 
